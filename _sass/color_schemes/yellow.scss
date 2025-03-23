@@ -1,0 +1,16 @@
+$color-scheme: light !default;
+$body-background-color: $white !default;
+$body-heading-color: $grey-dk-300 !default;
+$body-text-color: $grey-dk-100 !default;
+$link-color: #b58e00 !default;  // 黄色系カラー
+$nav-child-link-color: #875800 !default;  // 濃い目の黄色系
+$sidebar-color: #fff8e1 !default;  // 薄い黄色の背景
+$base-button-color: #fff8e1 !default;
+$btn-primary-color: #ffd54f !default;  // 黄色系のボタンカラー
+$code-background-color: $grey-lt-000 !default;
+$feedback-color: #ffecb3 !default;  // サイドバーのホバー効果用の黄色
+$table-background-color: $white !default;
+$search-background-color: $white !default;
+$search-result-preview-color: $grey-dk-000 !default;
+
+@import "./vendor/OneLightJekyll/syntax"; 
