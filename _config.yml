@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 講義資料テンプレート
-description: 講義資料のテンプレート
-baseurl: "/lecture_template" # the subpath of your site, e.g. /blog
+title: My Publications
+description: Academic publications by Nobutaka Shimizu
+baseurl: "/mypapers" # the subpath of your site, e.g. /blog
 url: "https://nobutakashimizu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-repository: lecture_template # for github-metadata
+repository: mypapers # for github-metadata
 
 permalink: pretty
 
@@ -110,7 +110,7 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "製作者: 清水 伸高":
+  "Homepage: Nobutaka Shimizu":
     - "https://sites.google.com/view/nobutaka-shimizu/home"
 
 # Makes Aux links open in a new tab. Default is false

@@ -1,249 +1,124 @@
 ---
-title: ホーム
+title: Publications
 layout: home
 nav_order: 1
-description: "講義トップ"
+description: "Academic publications by Nobutaka Shimizu"
 ---
 
-講義資料用のテンプレートです.
-テンプレートの大元は[just-the-docs](https://github.com/just-the-docs/just-the-docs)です.
-マークダウンで資料を記述できます. また数式はmathjaxで書けます.
+# Publications
 
-# 全体の大まかな流れ
+This publication list includes peer-reviewed journal articles, conference proceedings, and preprints in theoretical computer science and mathematics. My research focuses on discrete mathematics and theoretical computer science, particularly random graph theory, consensus dynamics, and computational complexity theory.
 
-マークダウンで書かれたページのファイルをローカルの環境でjekyllと呼ばれるソフトでコンパイルのような作業(htmlファイルやcssなどの生成)を行った後にリポジトリのmainブランチにプッシュするとGithub Actionを経由して更新が反映されるようになっています.
-具体的には, Settings/PagesのBuild and deploymentの欄をGithub Actionsにした後にプッシュすれば良いです.
+## Journal Articles (Peer-Reviewed)
 
-{: align="center"}
-![Github Actionの設定](assets/images/setting.png){: width="30%"}
+- **How Many Vertices Does a Random Walk Miss in a Network with a Moderately Increasing Number of Vertices?**  
+  Shuji Kijima, Nobutaka Shimizu, and Takeharu Shiraga  
+  *MATHEMATICS OF OPERATIONS RESEARCH*, 2025 (to appear)  
+  Preliminary version appeared in [SODA2021](https://epubs.siam.org/doi/abs/10.1137/1.9781611976465.8?mobileUi=0)  
+  [arXiv (2022)](https://arxiv.org/abs/2008.10837)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Walks</span>
 
-ローカルでページプレビューするにはjekyllを使ってページビルドする必要があり, そのためにはrubyの環境構築が必要になります. そのための手順は以下に記しておきます (macを想定).
+- **Quasi-majority Functional Voting on Expander Graphs**  
+  Nobutaka Shimizu and Takeharu Shiraga  
+  *Random Structures & Algorithms*, 2024  
+  [DOI: 10.1002/rsa.21224](https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.21224) | [arXiv (2022)](https://arxiv.org/abs/2002.07411) | [Slides](https://speakerdeck.com/nobushimi/quasi-majority-functional-voting-on-expander-graphs)  
+  Preliminary version appeared in [ICALP2020](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2020.97)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
 
+- **Reversible Random Walks on Dynamic Graphs**  
+  Nobutaka Shimizu and Takeharu Shiraga  
+  *Random Structures & Algorithms*, 63(4), pp.1100-1136, 2023  
+  [DOI: 10.1002/rsa.21164](https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.21164) | [arXiv (2022)](https://arxiv.org/abs/2002.07411)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Walks</span>
 
-# ローカルの環境設定方法
+- **Phase Transitions of Best-of-Two and Best-of-Three on Stochastic Block Models**  
+  Nobutaka Shimizu and Takeharu Shiraga  
+  *Random Structures & Algorithms*, 59(1), pp.96-140, 2021  
+  [DOI: 10.1002/rsa.20992](https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.20992) | Preliminary version appeared in [DISC2019](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.DISC.2019.32) | [Slides](https://speakerdeck.com/nobushimi/phase-transitions-of-best-of-two-and-best-of-three-on-stochastic-block-models)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
 
-## 手元で動かすのに必要なもの
-- Ruby
-  - rbenvでRubyのバージョン管理をするのが楽 (Pythonでいうところのpyenvみたいなもの).
-  - rbenvは, homebrewであれば `brew install rbenv` でインストールできます.
-  - rbenvを使ってRubyのバージョンを新しくしたい場合と手順を以下に記します.
-    1. `rbenv install -l` でインストールできるバージョンの一覧を取得して
-    2. `rbenv install バージョン番号` でインストールして
-    3. `rbenv global バージョン番号` でインストールしたバージョンをデフォルトに設定
-    4.  ~/.bash_profileに `eval "$(rbenv init -)"` を追記し, ターミナルで `source ~/.bash_profile` を実行.
-    5.  `ruby -v` でRubyがちゃんと指定したバージョンになっているかを確認
-- RubyGems
-  - bundle を `gem install bundler` でインストール
-  - bundleのバージョンは `gem install bundler` でアップグレードできます.
+- **The average distance and the diameter of dense random regular graphs**  
+  Nobutaka Shimizu  
+  *The Electronic Journal of Combinatorics*, 27(3), 2020  
+  [DOI: 10.37236/9809](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v27i3p62)  
+  Preliminary version appeared in [SODA2018](https://epubs.siam.org/doi/abs/10.1137/1.9781611975031.126)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Graphs</span>
 
-Jekyllをインストールし, ターミナルでフォルダに移動し
-```console
-  bundle install
-  bundle exec jekyll serve --livereload
-```
-これによって, http://127.0.0.1:4000/ をブラウザで開くと書いたものをプレビューすることができます. ファイルを編集し保存するとブラウザ上の表示も自動的に更新されるはずです (自動更新をオフにしたい場合はオプション `--livereload` を消してください).
+## Conference Proceedings (Peer-Reviewed)
 
-PCにあれこれインストールしたくない場合はdockerコンテナを使う方法もあります (dockerはインストールする必要あり).
+- **Error-Correction of Matrix Multiplication Algorithms**  
+  Shuichi Hirahara, Nobutaka Shimizu  
+  *Symposium on Theory of Computing (STOC25)*  
+  [ECCC TR24-026](https://eccc.weizmann.ac.il/report/2024/026/)  
+  <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span>
 
+- **Asynchronous 3-Majority Dynamics with Many Opinions**  
+  Colin Cooper, Frederik Mallmann-Trenn, Tomasz Radzik, Nobutaka Shimizu, Takeharu Shiraga  
+  *Symposium on Discrete Algorithms (SODA25)*  
+  [DOI: 10.1137/1.9781611978322.140](https://epubs.siam.org/doi/10.1137/1.9781611978322.140) | [arXiv:2503.02426](https://arxiv.org/abs/2503.02426) | [Slides](https://nobutakashimizu.github.io/SODA25_slide/)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
 
-# マークダウンファイルの場所
+- **Planted Clique Conjectures Are Equivalent**  
+  Shuichi Hirahara and Nobutaka Shimizu  
+  *Symposium on Theory of Computing (STOC24)*  
+  [DOI: 10.1145/3618260.3649751](https://dl.acm.org/doi/abs/10.1145/3618260.3649751) | [ECCC TR24-058](https://eccc.weizmann.ac.il/report/2024/058/) | [Slides](https://speakerdeck.com/nobushimi/planted-clique-conjectures-are-equivalent)  
+  <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span> <span class="paper-tag graphs">Graph Theory</span>
 
-- この文章は/index.mdに記述されており, トップページはこれを編集してください.
-- 講義資料は基本的に /doc/ に記述していきます. /doc/にフォルダを作成し, 各回ごとに整理することもできます.
-  - 例えば /doc/第1回/講義1.md という構成になります. また, /doc/第1回/にindex.mdというファイルを作成しておくことによって, 各回ごとのトップページを作成することができます.
-- サイトの様々な設定は/_config.ymlを編集してください. 例えば以下の要素を変更できます.
-  - ページタイトル
-  - 右上の「製作者: 清水 伸高」
-  - 最下部の「Copyright © 2024 Nobutaka Shimizu. This site is powered by Github Pages.」
-- baseurlの内容はリポジトリ名, urlの内容はhttps://GitHubのアカウント名.github.io にしないとGitHub Pagesに公開できません.
-  ```yml
-    baseurl: "/lecture_template" # /リポジトリ名
-    url: "https://nobutakashimizu.github.io" # https://アカウント名.github.io
-  ``` 
+- **Hardness Self-Amplification: Simplified, Optimized, and Unified**  
+  Shuichi Hirahara and Nobutaka Shimizu  
+  *Symposium on Theory of Computing (STOC23)*  
+  [DOI: 10.1145/3564246.3585189](https://dl.acm.org/doi/10.1145/3564246.3585189) | [ECCC TR23-026](https://eccc.weizmann.ac.il/report/2023/026/) | [Slides](https://speakerdeck.com/nobushimi/hardness-self-amplification-simplified-optimized-and-unified)  
+  <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span>
 
-# 数式の記述
+- **Hardness Self-Amplification from Feasible Hard-Core Sets**  
+  Shuichi Hirahara and Nobutaka Shimizu  
+  *Foundations of Computer Science (FOCS22)*  
+  [DOI: 10.1109/FOCS54457.2022.00083](https://ieeexplore.ieee.org/document/9996925) | [ECCC TR22-108](https://eccc.weizmann.ac.il/report/2022/108/) | [Slides](https://speakerdeck.com/nobushimi/hardness-self-amplification-from-feasible-hard-core-sets)  
+  <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span>
 
-## 基本の使い方
+- **Nearly Optimal Average-Case Complexity of Counting Bicliques Under SETH**  
+  Shuichi Hirahara and Nobutaka Shimizu  
+  *Symposium on Discrete Algorithms (SODA21)*  
+  [DOI: 10.1137/1.9781611976465.140](https://epubs.siam.org/doi/10.1137/1.9781611976465.140) | [arXiv:2010.05822](https://arxiv.org/abs/2010.05822) | [Slides](https://speakerdeck.com/nobushimi/nearly-optimal-average-case-complexity-of-counting-bicliques-under-seth)  
+  <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span> <span class="paper-tag graphs">Graph Theory</span>
 
-例えば
-```markdown
-  グラフ$G=(V,E)$を考える.
-```
-というインラインに数式を含む文は
+- **How Many Vertices Does a Random Walk Miss in a Network with Moderately Increasing the Number of Vertices?**  
+  Shuji Kijima, Nobutaka Shimizu and Takeharu Shiraga  
+  *Symposium on Discrete Algorithms (SODA21)*  
+  [DOI: 10.1137/1.9781611976465.8](https://epubs.siam.org/doi/abs/10.1137/1.9781611976465.8?mobileUi=0) | [arXiv:2008.10837](https://arxiv.org/abs/2008.10837) | [Slides](https://speakerdeck.com/nobushimi/how-many-vertices-does-a-random-walk-miss-in-a-network-with-moderately-increasing-the-number-of-vertices)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Walks</span>
 
-グラフ$G=(V,E)$を考える.
+- **Phase Transitions of Best-of-Two and Best-of-Three on Stochastic Block Models**  
+  Nobutaka Shimizu and Takeharu Shiraga  
+  *33rd International Symposium on Distributed Computing (DISC 2019)*  
+  [DOI: 10.4230/LIPIcs.DISC.2019.32](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.DISC.2019.32) | [arXiv:1907.12212](https://arxiv.org/abs/1907.12212)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
 
-のように表示されます. 複数行にまたがる式変形などは
-```text
+- **The Diameter of Dense Random Regular Graphs**  
+  Nobutaka Shimizu  
+  *Symposium on Discrete Algorithms (SODA 2018)*  
+  [DOI: 10.1137/1.9781611975031.126](https://epubs.siam.org/doi/10.1137/1.9781611975031.126)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Graphs</span>
 
-$$
-  \begin{align*}
-    a &= b \\
-      &= c \tag{*}
-  \end{align*}
-$$
+- **Average Shortest Path Length of Graphs of Diameter 3**  
+  Nobutaka Shimizu and Ryuhei Mori  
+  *Symposium on Networks-on-Chip (NOCS 2016)*  
+  [DOI: 10.1109/NOCS.2016.7579335](https://ieeexplore.ieee.org/document/7579335/) | [arXiv:1606.05119](https://arxiv.org/abs/1606.05119)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag theory">Network Theory</span>
 
-```
+## Preprints
 
-と書けば
+- **3-Majority and 2-Choices with Many Opinions**  
+  Nobutaka Shimizu and Takeharu Shiraga  
+  [arXiv:2503.02426](https://arxiv.org/abs/2503.02426)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
 
-$$
-  \begin{align*}
-    a &= b \\
-      &= c \tag{*}
-  \end{align*}
-$$
+## Other Publications
 
-と表示されます (最初と最後の`$$`の前後には一行空けてください).
-
-## newcommand
-
-newcommandを使って独自の定義が設定できます.
-```
-$$
-  \newcommand{Real}{\mathbb{R}}
-  \Real
-$$
-
-```
-とすると
-
-$$
-  \newcommand{Real}{\mathbb{R}}
-  \Real
-$$
-
-となります. newcommandの範囲は異なるブロックにも及びます.
-```
-$$
-  \newcommand{Int}{\mathbb{Z}}
-$$
-
-$$
-  \begin{align*}
-    \Int
-  \end{align*}
-$$
-
-```
-とすると, 期待通り
-
-$$
-  \newcommand{Int}{\mathbb{Z}}
-$$
-
-$$
-  \begin{align*}
-    \Int
-  \end{align*}
-$$
-
-が出力されます.
-
-## パッケージのインポートとマクロの記述
-Mathjax v3の[extension](https://docs.mathjax.org/en/latest/input/tex/extensions/index.html)が使えます.
-カスタムする場合は _layouts/default.html
-の以下の画像のあたりを適切に編集してください.
-
-
-{: align="center"}
-![mathjax config](assets/images/mathjax_config.png){: width="80%"}
-
-マクロも記述できます.
-例えば
-```
-$$
-  \begin{align*}
-    \E[X]　&= n\cdot \qty(\frac{1}{2})
-  \end{align*}
-$$
-```
-とすると, 期待通りに
-
-$$
-  \begin{align*}
-    \E[X]　&= n\cdot \qty(\frac{1}{2})
-  \end{align*}
-$$
-
-が出力されます. インラインでも `\binset` とうつと$\binset$が出力されます.
-
-## 注意
-
-数式の記述において, 記法の競合を避けるためLaTeXとは少し異なる記法をする可能性があります.
-  - 例えば中括弧$\\{\\}$は```\{ \}```ではなく```\\{ \\}```とする必要があります. physicsパッケージを読み込んで `\qty{...}`としておくと良いかもしれません.
-  - また, 絶対値の記号$\lvert \rvert$では```||```ではなく```\lvert \rvert```を使わなければ正しくレンダリングされない可能性があります (まぁ, `\abs{v}`などとすれば事足りますが).
-
-# 定理環境
-
-定義などを述べるためのコールアウトは以下のように記述できます.
-
-{: .definition }
-> このボックスには**定義**を記します. 以下のように, 数式ボックスを内部に含めることができます:
->
->  $$
-    \begin{align*}
-      A_{u,v} = \begin{cases}
-        1	& \text{if $\{u,v\} \in E$}, \\
-        0 & \text{otherwise}.
-      \end{cases}
-    \end{align*}
->  $$
-  
-また, 以下のようにタイトルを自由に付与することができます.
-
-<div id="def1" markdown="1">
-
-{: .definition-title }
-> 定義1
->
-> 定義の例.
-
-</div>
-
-
-{: .proposition }
-> このボックスには**命題**を記します.
-
-
-<details markdown="1" style="background-color: #eee;">
-<summary style="display: list-item">証明</summary>
-
-  このように, 折りたためる証明も書け, 内部で**マークダウン**も記述できます.
-  内部でもインライン(例えば$a=b$)や独立した数式ブロックが書けます.
-  $$
-    \begin{align*}
-      a &= b \\
-        &= c.
-    \end{align*}
-  $$
-
-
-  $\square$
-</details>
-
-{: .theorem }
-> このボックスには定理(特に重要度の高い命題)を記します.
-
-{: .lemma }
-> このボックスには命題や定理を示すために必要な補助的な主張を記します
-
-{: .corollary }
-> このボックスには定理や命題などから直ちに成り立つ結果を記します.
-
-{: .remark }
-> このボックスには強調したい注釈が入ります.
-
-他にも命題,補題,定理,系のボックスが使えます. ちなみに<div>でid属性を指定してアンカーリンクを使うと<a href="#def1">定義1</a>のようにリンクを貼れます.
-
-
-## 新たなコールアウトの定義方法
-他のボックス(例えば観察,未解決問題用のコールアウトなど)を自身で追加したいときは以下の二つのファイルを適切に編集してください.
-- /_config.yml (コールアウトの宣言)
-- /just-the-docs/_sass/support/_variables.scss (背景や文字の色の定義)
-
-# 注意事項
-- 手元の実行環境に依存しますが, 少なくとも私の環境では講義資料を格納するフォルダ名に全角文字を使うとlivereload機能にエラーが生じてしまいましたので, 念の為フォルダ明は半角にした方が良いと思います (ファイル名は全角でも大丈夫だった)
-- 画像やリンクを挿入する際, jekyllの「コンパイル」作業によって画像ファイル自体が別の場所に移動するため相対パスで指定すると良いです. ただし, 本来よりも一つ上のパスを指定する必要があり, 少し直感に反するので注意してください (第1回の例参照).
+- **動的グラフ上のランダムウォーク** (Random Walks on Dynamic Graphs)  
+  来嶋 秀治, 清水 伸高, 白髪 丈晴  
+  *日本応用数理学会 学会誌「応用数理」*, 32(1), pp. 5-15, 2022  
+  [DOI: 10.11540/bjsiam.32.1_5](https://doi.org/10.11540/bjsiam.32.1_5)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Walks</span> <span class="paper-tag theory">Survey Paper</span>
 
 

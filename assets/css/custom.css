@@ -1,0 +1,57 @@
+/* Custom CSS for hover effects on links */
+
+a {
+  transition: background-color 0.3s ease;
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+}
+
+a:hover {
+  background-color: #ebeeff;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.main-content a:hover,
+.site-nav a:hover,
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+  background-color: #ebeeff;
+  text-decoration: none;
+}
+
+/* Paper tags style */
+.paper-tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 0.15em 0.6em;
+  margin: 0.2em 0.3em;
+  margin-top: 0.4em;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #555;
+}
+
+.paper-tag.theory {
+  background-color: #e1f5fe;
+  color: #0277bd;
+}
+
+.paper-tag.graphs {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.paper-tag.complexity {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.paper-tag.randomized {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.paper-tag.consensus {
+  background-color: #e0f2f1;
+  color: #00695c;
+} 
