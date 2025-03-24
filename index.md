@@ -88,6 +88,12 @@ This publication list includes peer-reviewed journal articles, conference procee
   [DOI: 10.1137/1.9781611976465.8](https://epubs.siam.org/doi/abs/10.1137/1.9781611976465.8?mobileUi=0) | [arXiv:2008.10837](https://arxiv.org/abs/2008.10837) | [Slides](https://speakerdeck.com/nobushimi/how-many-vertices-does-a-random-walk-miss-in-a-network-with-moderately-increasing-the-number-of-vertices)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Walks</span>
 
+- **Quasi-majority Functional Voting on Expander Graphs**  
+  Nobutaka Shimizu and Takeharu Shiraga  
+  *International Colloquium on Automata, Languages, and Programming (ICALP 2020)*  
+  [DOI: 10.4230/LIPIcs.ICALP.2020.97](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2020.97) | [arXiv:2002.07411](https://arxiv.org/abs/2002.07411)  
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
+
 - **Phase Transitions of Best-of-Two and Best-of-Three on Stochastic Block Models**  
   Nobutaka Shimizu and Takeharu Shiraga  
   *International Symposium on Distributed Computing (DISC 2019)*  
@@ -105,12 +111,6 @@ This publication list includes peer-reviewed journal articles, conference procee
   *Symposium on Networks-on-Chip (NOCS 2016)*  
   [DOI: 10.1109/NOCS.2016.7579335](https://ieeexplore.ieee.org/document/7579335/) | [arXiv:1606.05119](https://arxiv.org/abs/1606.05119)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag theory">Network Theory</span>
-
-- **Quasi-majority Functional Voting on Expander Graphs**  
-  Nobutaka Shimizu and Takeharu Shiraga  
-  *International Colloquium on Automata, Languages, and Programming (ICALP 2020)*  
-  [DOI: 10.4230/LIPIcs.ICALP.2020.97](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2020.97) | [arXiv:2002.07411](https://arxiv.org/abs/2002.07411)  
-  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
 
 ## Preprints
 
