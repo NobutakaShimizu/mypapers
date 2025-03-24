@@ -48,67 +48,67 @@ This publication list includes peer-reviewed journal articles, conference procee
 
 - **Error-Correction of Matrix Multiplication Algorithms**  
   Shuichi Hirahara, Nobutaka Shimizu  
-  *Symposium on Theory of Computing (STOC 2025)*  
+  *Symposium on Theory of Computing (**STOC 2025**)*  
   [ECCC TR24-026](https://eccc.weizmann.ac.il/report/2024/026/)  
   <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span>
 
 - **Asynchronous 3-Majority Dynamics with Many Opinions**  
   Colin Cooper, Frederik Mallmann-Trenn, Tomasz Radzik, Nobutaka Shimizu, Takeharu Shiraga  
-  *Symposium on Discrete Algorithms (SODA 2025)*  
+  *Symposium on Discrete Algorithms (**SODA 2025**)*  
   [DOI: 10.1137/1.9781611978322.140](https://epubs.siam.org/doi/10.1137/1.9781611978322.140) | [arXiv:2503.02426](https://arxiv.org/abs/2503.02426) | [Slides](https://nobutakashimizu.github.io/SODA25_slide/)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
 
 - **Planted Clique Conjectures Are Equivalent**  
   Shuichi Hirahara and Nobutaka Shimizu  
-  *Symposium on Theory of Computing (STOC 2024)*  
+  *Symposium on Theory of Computing (**STOC 2024**)*  
   [DOI: 10.1145/3618260.3649751](https://dl.acm.org/doi/abs/10.1145/3618260.3649751) | [ECCC TR24-058](https://eccc.weizmann.ac.il/report/2024/058/) | [Slides](https://speakerdeck.com/nobushimi/planted-clique-conjectures-are-equivalent)  
   <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span> <span class="paper-tag graphs">Graph Theory</span>
 
 - **Hardness Self-Amplification: Simplified, Optimized, and Unified**  
   Shuichi Hirahara and Nobutaka Shimizu  
-  *Symposium on Theory of Computing (STOC 2023)*  
+  *Symposium on Theory of Computing (**STOC 2023**)*  
   [DOI: 10.1145/3564246.3585189](https://dl.acm.org/doi/10.1145/3564246.3585189) | [ECCC TR23-026](https://eccc.weizmann.ac.il/report/2023/026/) | [Slides](https://speakerdeck.com/nobushimi/hardness-self-amplification-simplified-optimized-and-unified)  
   <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span>
 
 - **Hardness Self-Amplification from Feasible Hard-Core Sets**  
   Shuichi Hirahara and Nobutaka Shimizu  
-  *Foundations of Computer Science (FOCS 2022)*  
+  *Foundations of Computer Science (**FOCS 2022**)*  
   [DOI: 10.1109/FOCS54457.2022.00083](https://ieeexplore.ieee.org/document/9996925) | [ECCC TR22-108](https://eccc.weizmann.ac.il/report/2022/108/) | [Slides](https://speakerdeck.com/nobushimi/hardness-self-amplification-from-feasible-hard-core-sets)  
   <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span>
 
 - **Nearly Optimal Average-Case Complexity of Counting Bicliques Under SETH**  
   Shuichi Hirahara and Nobutaka Shimizu  
-  *Symposium on Discrete Algorithms (SODA 2021)*  
+  *Symposium on Discrete Algorithms (**SODA 2021**)*  
   [DOI: 10.1137/1.9781611976465.140](https://epubs.siam.org/doi/10.1137/1.9781611976465.140) | [arXiv:2010.05822](https://arxiv.org/abs/2010.05822) | [Slides](https://speakerdeck.com/nobushimi/nearly-optimal-average-case-complexity-of-counting-bicliques-under-seth)  
   <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span> <span class="paper-tag graphs">Graph Theory</span>
 
 - **How Many Vertices Does a Random Walk Miss in a Network with Moderately Increasing the Number of Vertices?**  
   Shuji Kijima, Nobutaka Shimizu and Takeharu Shiraga  
-  *Symposium on Discrete Algorithms (SODA 2021)*  
+  *Symposium on Discrete Algorithms (**SODA 2021**)*  
   [DOI: 10.1137/1.9781611976465.8](https://epubs.siam.org/doi/abs/10.1137/1.9781611976465.8?mobileUi=0) | [arXiv:2008.10837](https://arxiv.org/abs/2008.10837) | [Slides](https://speakerdeck.com/nobushimi/how-many-vertices-does-a-random-walk-miss-in-a-network-with-moderately-increasing-the-number-of-vertices)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Walks</span>
 
 - **Quasi-majority Functional Voting on Expander Graphs**  
   Nobutaka Shimizu and Takeharu Shiraga  
-  *International Colloquium on Automata, Languages, and Programming (ICALP 2020)*  
+  *International Colloquium on Automata, Languages, and Programming (**ICALP 2020**)*  
   [DOI: 10.4230/LIPIcs.ICALP.2020.97](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2020.97) | [arXiv:2002.07411](https://arxiv.org/abs/2002.07411)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
 
 - **Phase Transitions of Best-of-Two and Best-of-Three on Stochastic Block Models**  
   Nobutaka Shimizu and Takeharu Shiraga  
-  *International Symposium on Distributed Computing (DISC 2019)*  
+  *International Symposium on Distributed Computing (**DISC 2019**)*  
   [DOI: 10.4230/LIPIcs.DISC.2019.32](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.DISC.2019.32) | [arXiv:1907.12212](https://arxiv.org/abs/1907.12212)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
 
 - **The Diameter of Dense Random Regular Graphs**  
   Nobutaka Shimizu  
-  *Symposium on Discrete Algorithms (SODA 2018)*  
+  *Symposium on Discrete Algorithms (**SODA 2018**)*  
   [DOI: 10.1137/1.9781611975031.126](https://epubs.siam.org/doi/10.1137/1.9781611975031.126)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Graphs</span>
 
 - **Average Shortest Path Length of Graphs of Diameter 3**  
   Nobutaka Shimizu and Ryuhei Mori  
-  *Symposium on Networks-on-Chip (NOCS 2016)*  
+  *Symposium on Networks-on-Chip (**NOCS 2016**)*  
   [DOI: 10.1109/NOCS.2016.7579335](https://ieeexplore.ieee.org/document/7579335/) | [arXiv:1606.05119](https://arxiv.org/abs/1606.05119)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag theory">Network Theory</span>
 
