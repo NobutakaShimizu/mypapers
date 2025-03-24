@@ -20,7 +20,7 @@ This publication list includes peer-reviewed journal articles, conference procee
 
 - **Quasi-majority Functional Voting on Expander Graphs**  
   Nobutaka Shimizu and Takeharu Shiraga  
-  *Random Structures & Algorithms*, 2024  
+  *Random Structures & Algorithms*, 65(4), pp.613-643, 2024  
   [DOI: 10.1002/rsa.21224](https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.21224) | [arXiv (2022)](https://arxiv.org/abs/2002.07411) | [Slides](https://speakerdeck.com/nobushimi/quasi-majority-functional-voting-on-expander-graphs)  
   Preliminary version appeared in [ICALP2020](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2020.97)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
