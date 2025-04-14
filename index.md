@@ -13,10 +13,10 @@ This publication list includes peer-reviewed journal articles, conference procee
 
 - **How Many Vertices Does a Random Walk Miss in a Network with a Moderately Increasing Number of Vertices?**  
   Shuji Kijima, Nobutaka Shimizu, and Takeharu Shiraga  
-  *MATHEMATICS OF OPERATIONS RESEARCH*, 2025 (to appear)  
+  *MATHEMATICS OF OPERATIONS RESEARCH*, 2025
+  [DOI: 10.1287/moor.2023.0060](https://pubsonline.informs.org/doi/full/10.1287/moor.2023.0060) | [arXiv (2021)](https://arxiv.org/abs/2008.10837) | [Slides](https://speakerdeck.com/nobushimi/how-many-vertices-does-a-random-walk-miss-in-a-network-with-moderately-increasing-the-number-of-vertices)
   Preliminary version appeared in [SODA2021](https://epubs.siam.org/doi/abs/10.1137/1.9781611976465.8?mobileUi=0)  
-  [arXiv (2022)](https://arxiv.org/abs/2008.10837)  
-  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Walks</span>
+  <span class="paper-tag randomized">Random Walks</span>
 
 - **Quasi-majority Functional Voting on Expander Graphs**  
   Nobutaka Shimizu and Takeharu Shiraga  
