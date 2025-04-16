@@ -48,7 +48,7 @@ This publication list includes peer-reviewed journal articles, conference procee
 
 - **An Optimal Error-Correcting Reduction for Matrix Multiplication**
   Shuichi Hirahara, Nobutaka Shimizu  
-  *International Colloquium on Automata, Languages, and Programming (ICALP 2025)*
+  *International Colloquium on Automata, Languages, and Programming (**ICALP 2025**)*
   <span class="paper-tag theory">Theoretical CS</span> <span class="paper-tag complexity">Computational Complexity</span>
 
 - **Error-Correction of Matrix Multiplication Algorithms**  
