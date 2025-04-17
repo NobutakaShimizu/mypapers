@@ -46,6 +46,12 @@ This publication list includes peer-reviewed journal articles, conference procee
 
 ## Conference Proceedings (Peer-Reviewed)
 
+- **3-Majority and 2-Choices with Many Opinions**
+  Nobutaka Shimizu and Takeharu Shiraga  
+  *Symposium on Principles of Distributed Computing (**PODC 2025**)*
+  [arXiv:2503.02426](https://arxiv.org/abs/2503.02426)
+  <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
+
 - **An Optimal Error-Correcting Reduction for Matrix Multiplication**
   Shuichi Hirahara, Nobutaka Shimizu  
   *International Colloquium on Automata, Languages, and Programming (**ICALP 2025**)*
