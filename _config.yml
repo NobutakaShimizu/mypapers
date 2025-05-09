@@ -163,24 +163,27 @@ color_scheme: blue
 callouts_level: quiet # or loud
 callouts:
   definition:
-    title: 定義.
+    title: Definition.
     color: blue
   lemma:
-    title: 補題.
+    title: Lemma.
     color: green
   proposition:
-    title: 命題.
+    title: Proposition.
     color: purple
   theorem:
-    title: 定理.
+    title: Theorem.
     color: red
   corollary:
-    title: 系.
+    title: Corollary.
     color: yellow
   remark:
-    title: 注釈.
+    title: Remark.
     color: gray
-
+  conjecture:
+    title: Conjecture.
+    color: purple
+  
 # Google Analytics Tracking (optional)
 # Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
 # Note: the main Just the Docs site does *not* use Google Analytics.

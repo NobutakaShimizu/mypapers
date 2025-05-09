@@ -7354,7 +7354,7 @@ p.definition, blockquote.definition {
 }
 p.definition::before, blockquote.definition::before {
   color: #183385;
-  content: "定義.";
+  content: "Definition.";
   display: block;
   font-weight: bold;
   text-transform: none;
@@ -7419,7 +7419,7 @@ p.lemma, blockquote.lemma {
 }
 p.lemma::before, blockquote.lemma::before {
   color: #026e57;
-  content: "補題.";
+  content: "Lemma.";
   display: block;
   font-weight: bold;
   text-transform: none;
@@ -7484,7 +7484,7 @@ p.proposition, blockquote.proposition {
 }
 p.proposition::before, blockquote.proposition::before {
   color: #381885;
-  content: "命題.";
+  content: "Proposition.";
   display: block;
   font-weight: bold;
   text-transform: none;
@@ -7549,7 +7549,7 @@ p.theorem, blockquote.theorem {
 }
 p.theorem::before, blockquote.theorem::before {
   color: #dd2e2e;
-  content: "定理.";
+  content: "Theorem.";
   display: block;
   font-weight: bold;
   text-transform: none;
@@ -7614,7 +7614,7 @@ p.corollary, blockquote.corollary {
 }
 p.corollary::before, blockquote.corollary::before {
   color: #e7af06;
-  content: "系.";
+  content: "Corollary.";
   display: block;
   font-weight: bold;
   text-transform: none;
@@ -7679,7 +7679,7 @@ p.remark, blockquote.remark {
 }
 p.remark::before, blockquote.remark::before {
   color: #777777;
-  content: "注釈.";
+  content: "Remark.";
   display: block;
   font-weight: bold;
   text-transform: none;
@@ -7732,6 +7732,71 @@ blockquote.remark-title > p:nth-child(2) {
   margin-top: 0;
 }
 blockquote.remark-title > p:last-child {
+  margin-bottom: 0;
+}
+
+p.conjecture, blockquote.conjecture {
+  background: rgba(114, 83, 237, 0.2);
+  border-left: 4px solid #381885;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.conjecture::before, blockquote.conjecture::before {
+  color: #381885;
+  content: "Conjecture.";
+  display: block;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+p.conjecture > .conjecture-title, blockquote.conjecture > .conjecture-title {
+  color: #381885;
+  display: block;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+p.conjecture-title, blockquote.conjecture-title {
+  background: rgba(114, 83, 237, 0.2);
+  border-left: 4px solid #381885;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.conjecture-title > p:first-child, blockquote.conjecture-title > p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #381885;
+  display: block;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+blockquote.conjecture {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.conjecture > p:first-child {
+  margin-top: 0;
+}
+blockquote.conjecture > p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.conjecture-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.conjecture-title > p:nth-child(2) {
+  margin-top: 0;
+}
+blockquote.conjecture-title > p:last-child {
   margin-bottom: 0;
 }
 
