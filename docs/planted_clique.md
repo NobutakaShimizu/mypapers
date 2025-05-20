@@ -7,6 +7,10 @@ nav_order: 2
 
 In this note, I will explain my STOC'24 paper "Planed Clique Conjectures Are Equivalent", a joint work with Shuichi Hirahara.
 
+- link to [STOC version](https://dl.acm.org/doi/abs/10.1145/3618260.3649751)
+- link to [full version](https://eccc.weizmann.ac.il/report/2024/058/)
+- link to [slide](https://speakerdeck.com/nobushimi/planted-clique-conjectures-are-equivalent)
+
 ## Background
 
 In **Planted Clique Problem**, we are given a random graph obtained by the following procedure:
@@ -59,6 +63,11 @@ If $G$ is drawn from $G(n,1/2)$ and $C$ is a random $k$-vertex set, then distrib
 Thus, assuming Planted Clique Conjecture, it is hard to invert $f(G,C)$ for random $G$ and $C$.
 A variant of Planted Clique Problem is shown to be useful in the context of secret sharing[12] and public-key cryptography[13].
 
+
+{: align="center"}
+  ![Applications]({{site.baseurl}}/docs/images/PC_application.png)
+{: width=70%}
+
 ## Planted Clique Conjectures Are Equivalent
 
 In my STOC'24 paper with Shuichi [14], we show that several variant of Planted Clique Conjectures are equivalent.
@@ -72,6 +81,10 @@ The variants are as follows:
   $$
 
   Our goal is to design an algorithm with as high advantage as possible.
+
+  {: align="center"}
+    ![Planted Clique Detection]({{site.baseurl}}/docs/images/PCvsER.png)
+  {: width=70%}
   
 - **Search version**: In the search version of Planted Clique Problem, we are given a graph $G$ that is drawn from $\PC(n,k)$, and our task is to find the planted clique $C$ (this coincides with the definition above). We say that an algorithm $A$ has **success probability $\beta$** if
 
@@ -89,7 +102,13 @@ In view of this, the formal statement of "Planted Clique Conjecture" relies on
   - the choice of the parameter $\beta$ (the success probability or advantage).
 
   In our paper [14], we show that the choice above (decision or search, and the choice of $\beta$) does **not** matter for a wide range of $\beta$.
-  Specifically, we prove the following result.
+  Roughly speaking, we show that
+
+  {: align="center"}
+  *If one can distinguish $\PC(n,n^{1/2-\alpha})$ and $G(n,1/2)$ with advantage $\Omega(1)$ for some $\alpha>0$, then one can find the planted clique $C$ from $\PC(n,n^{1/2-\alpha'})$ with success probability $1-\exp(-n^{\Omega(1)})$ for some $\alpha'>0$.*
+  
+
+  Below is the precise statement of our result.
 
   {: .theorem-title}
   >**Theorem 2 (informal)**
@@ -110,22 +129,61 @@ In view of this, the formal statement of "Planted Clique Conjecture" relies on
   Similarly, the last three statements say that the choice of the advantage $\beta$ does not matter for the decision version of Planted Clique Conjecture as long as $k^{2+\gamma}/n \le \beta \le 1-\exp(-\poly(n)) $.
 
   In the binomial-$k$ model, the size of the planted clique is random with mean $k$. But the Chernoff bound yields that the clique size is concentrated around $k$ with high probability.
-
+  So these two models (binomial-$k$ and fixed-$k$) are essentially equivalent (but I don't know how to prove that).
 
   As an immediate but interesting corollary, we can obtain the following statement:
 
   {: .corollary-title}
   >**Corollary 3 (informal)**
   >
-  > If there is a polynomial-time algorithm that distinguishes $\widetilde{PC}(n,k)$ and $G(n,1/2)$ with advantage $k^{2+\gamma}/n$ for some constant $\gamma>0$, then there is a polynomial-time algorithm that recovers the planted clique for a graph drawn from $\PC(n,n^{1/2-\alpha'})$ with advantage $1-\exp(-n^{\gamma'})$ for some constants $\alpha',\gamma'>0$.
+  > If there is a polynomial-time algorithm that distinguishes $\widetilde{\PC}(n,k)$ and $G(n,1/2)$ with advantage $k^{2+\gamma}/n$ for some constant $\gamma>0$, then there is a polynomial-time algorithm that recovers the planted clique for a graph drawn from $\PC(n,n^{1/2-\alpha'})$ with advantage $1-\exp(-n^{\gamma'})$ for some constants $\alpha',\gamma'>0$.
 
   Indeed, by counting the number of edges, we can distinguish $\widetilde{\PC}(n,k)$ with $G(n,1/2)$ with advantage $\Omega(k^/n)$ (see, e.g., [Luca's blog](https://lucatrevisan.wordpress.com/2018/05/06/search-vs-decision-vs-certification-for-planted-problems/)).
   Therefore, Corollary 3 implies that assuming Planted Clique Conjecture, **the edge counting algorithm is almost optimal** for the decision version of Planted Clique Problem.
 
   **Update News**: A very recent paper [15] further closed the gap between $k^{2+\gamma}/n$ and $k^2/n$. Actually, they showed that assuming Conjecture 1, a low-degree algorithm achieves an optimal advantage for the decision version of Planted Clique Problem.
 
+## Techniques
 
+The key ingredient in our proof is two kinds of reductions: **embedding reduction** and **shrinking reduction**.
+These reductions are aimed to boost the advantage or success probability of an algorithm.
 
+### Embedding Reduction
+
+This reduction is introduced in our previous work [16].
+The idea is to randomly embed the planted clique $C$ into a larger Erdős--Rényi graph $G(N,1/2)$.
+
+{: align="center"}
+  ![Embedding Reduction]({{site.baseurl}}/docs/images/embedding.png)
+{: width=70%}
+
+Note that the distribution of the resulting graph is identical to $\PC(N,k)$.
+If we set $N = n^{1+o(1)}$ and $k = n^{1/2-\alpha}$, then the size of the planted clique $C$ is $k = n^{1/2-\alpha} = N^{1/2-\alpha-o(1)}$.
+
+Our strategy is simple:
+1. Let $A$ be an algorithm that finds the planted clique with success probability $\gamma$. Let $G\sim\PC(n,k)$ be the input.
+2. Obtain $G'$ by the embedding reduction above.
+3. If $A(G')$ outputs a $k$-clique $C'$, then, we can recover the original clique and output it.
+4. Repeat 2-3 for $\poly(n)$ times.
+
+This gives us a polynomial-time algorithm that recovers the planted clique with very high success probability.
+
+### Shrinking Reduction
+
+This reduction is the new reduction introduced in this paper.
+The reduction itself is very simple: Given an $M$-vertex graph drawn from $\PC(M,k)$, choose $m$ distinct vertices randomly and take the subgraph induced by these vertices.
+
+{: align="center"}
+  ![Shrinking Reduction]({{site.baseurl}}/docs/images/shrinking.png)
+{: width=70%}
+
+Let $S\subseteq[M]$ be set of the chosen $m$ vertices in this reduction and $C\subseteq[M]$
+Then, the resulting graph has clique of size $\abs{S\cap C}$.
+The distribution of $\abs{S\cap C}$ is identical to the hypergeometric distribution with mean $\frac{m}{M}k$.
+Actually, this distribution is statistically close to the binomial distribution $\mathrm{Bin}(m,k/M)$.
+That is, the resulting graph has a clique of size (statistically close to) $\mathrm{Bin}(m,k/M)$, meaning that the graph is close to $\widetilde{\PC}(n,k)$.
+
+If $k=M^{1/2-\alpha}$ and $m=M^{1-o(1)}$, then the expected size of the clique is $\frac{m}{M}k=M^{1/2-\alpha-o(1)}=m^{1/2-\alpha-o(1)}$.
 
 ## References
 
@@ -144,3 +202,4 @@ In view of this, the formal statement of "Planted Clique Conjecture" relies on
 13. Benny Applebaum, Boaz Barak, and Avi Wigderson. 2010. Public-Key Cryptography from Different Assumptions. *In Proceedings of Symposium on Theory of Computing*. [doi:10.1145/1806689.1806715](https://dl.acm.org/doi/10.1145/1806689.1806715).
 14. Shuichi Hirahara and Nobutaka Shimizu. 2024. Planted Clique Conjectures Are Equivalent. *In Proceedings of Symposium on Theory of Computing (STOC)*. [doi:10.1145/3618260.3649751](https://dl.acm.org/doi/10.1145/3632754.3632950).
 15. Ansh Nagda and Prasad Raghavendra. 2025. On optimal distinguishers for Planted Clique. [arXiv:2505.01990](https://arxiv.org/abs/2505.01990).
+16. Shuichi Hirahara and Nobutaka Shimizu. 2023. Hardness Self-Amplification: Simplified, Optimized, and Unified. *In Proceedings of Symposium on Theory of Computing (STOC)*. [doi:10.1145/3564246.3585189](https://dl.acm.org/doi/10.1145/3564246.3585189).
