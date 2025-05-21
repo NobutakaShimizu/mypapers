@@ -5,7 +5,8 @@ nav_order: 2
 
 # Planted Clique Conjectures Are Equivalent
 
-In this note, I will explain my STOC'24 paper "Planed Clique Conjectures Are Equivalent", a joint work with Shuichi Hirahara.
+In this note, I will explain my favorite STOC'24 paper "Planed Clique Conjectures Are Equivalent", a joint work with Shuichi Hirahara.
+I will explain the background, main results, and the description of our reductions. The detailed analysis and proofs are omitted here, but you can find them in the paper.
 
 - link to [STOC version](https://dl.acm.org/doi/abs/10.1145/3618260.3649751)
 - link to [full version](https://eccc.weizmann.ac.il/report/2024/058/)
@@ -19,20 +20,20 @@ Sample a graph $G$ from the Erdős-Rényi model $G(n, 1/2)$ with $n$ vertices. T
 
 The goal is to find the planted clique $C$ given a graph drawn from $\PC(n,k)$.
 
-The complexity of recovering the planted clique in a graph drawn from $\PC(n,k)$ crucially depends on the size $k$ of the planted clique.
+The complexity of finding the planted clique in a graph drawn from $\PC(n,k)$ crucially depends on the size $k$ of the planted clique.
 
-- It is well known that the maximum clique in a random graph $G\sim G(n,1/2)$ is of size $(2+o(1))\log_2 n$ with high probability. Thus, if $k\le 2\log_2 n$, then we cannot recover $C$.
-- On the other hand, if $k\gg 2\log_2 n$, we can recover $C$ with high probability by the brute-force search over all $k$-cliques in $G$.
+- It is well known that the maximum clique in a random graph $G\sim G(n,1/2)$ is of size $(2+o(1))\log_2 n$ with high probability. Thus, if $k\le 2\log_2 n$, then we cannot find $C$.
+- On the other hand, if $k\gg 2\log_2 n$, we can find $C$ with high probability by the brute-force search over all $k$-cliques in $G$.
 
 Therefore, the threshold $k=2\log_2 n$ is the information-theoretic limit for solvability of the planted clique problem.
 However, the brute-force search for $k\gg2\log_2 n$ is not efficient.
 So the natural question is:
 
-*Can we recover the planted clique $C$ given $G\sim\PC(n,k)$ when $k\gg 2\log_2 n$?*
+*Can we find the planted clique $C$ given $G\sim\PC(n,k)$ when $k\gg 2\log_2 n$?*
 
-This question was initially studied by Jerrum[1] and Kučera[2]. Jerrum[1] proved that a class of algorithms based on Metropolis process cannot recover the planted clique when $k\ll \sqrt{n}$.
+This question was initially studied by Jerrum[1] and Kučera[2]. Jerrum[1] proved that a class of algorithms based on Metropolis process cannot find the planted clique when $k\ll \sqrt{n}$.
 Kučera[2] showed that if $k\ge c\sqrt{n\log n}$ for a sufficiently large constant $c>0$, then vertices with top-$k$ largest degrees in $G$ form the planted clique $C$ with high probability.
-In a seminal work, Alon, Krivelevich, and Sudakov[3] presented a polynomial-time algorithm that recovers the planted clique with high probability when $k\ge c\sqrt{n}$ for an arbitrary constant $c>0$.
+In a seminal work, Alon, Krivelevich, and Sudakov[3] presented a polynomial-time algorithm that finds the planted clique with high probability when $k\ge c\sqrt{n}$ for an arbitrary constant $c>0$.
 
 Despite a long line of research from 1990s, no polynomial-time algorithm is known for Planted Clique Problem for $k\ll \sqrt{n}$.
 Moreover, several works have shown that Planted Clique Problem with $k\ll \sqrt{n}$ is hard against various natural classes of algorithms, including Lovász–Schrijver semidefinite programming hierarchy[4], sum-of-squares hierarchy[5], statistical query algorithms[6], and constant depth circuits[7].
@@ -42,7 +43,7 @@ This raises the conjecture asserting the hardness of Planted Clique Problem for 
 {: .conjecture-title}
 >**Conjecture 1(Planted Clique Conjecture)**
 >
-> There exists a constant $\alpha>0$ such that for $k = n^{1/2-\alpha}$, no polynomial-time algorithm can recover the planted clique $C$ from $G\sim\PC(n,k)$ with probability $2/3$, where the probability is taken over the choice of $G$.
+> There exists a constant $\alpha>0$ such that for $k = n^{1/2-\alpha}$, no polynomial-time algorithm can find the planted clique $C$ from $G\sim\PC(n,k)$ with probability $2/3$, where the probability is taken over the choice of $G$.
 
 Assuming Conjecture 1, we can see that Planted Clique Problem exhibits a **computational-statistical gap**: The information-theoretical threshold is $k=2\log_2 n$, whereas the computational threshold is $k=\sqrt{n}$.
 This kind of gap appears in a variety of problems in high-dimensional statistical inference.
@@ -114,9 +115,9 @@ In view of this, the formal statement of "Planted Clique Conjecture" relies on
   >**Theorem 2 (informal)**
   >
   > The following statements are equivalent:
-  > 1. There exist a constant $\alpha>0$ and a polynomial-time algorithm $A$ that recovers the planted clique $C$ from $G\sim\PC(n,n^{1/2-\alpha})$ with probability $2/3$.
-  > 2. There exist constants $\alpha,\gamma>0$ and a polynomial-time algorithm $A$ that recovers the planted clique $C$ from $G\sim\PC(n,n^{1/2-\alpha})$ with probability $1-\exp(-n^\gamma)$.
-  > 3. There exist constants $\alpha,\gamma>0$ and a polynomial-time algorithm $A$ that recovers the planted clique $C$ from $G\sim\PC(n,n^{1/2-\alpha})$ with success probability $1/n^\gamma$.
+  > 1. There exist a constant $\alpha>0$ and a polynomial-time algorithm $A$ that finds the planted clique $C$ from $G\sim\PC(n,n^{1/2-\alpha})$ with probability $2/3$.
+  > 2. There exist constants $\alpha,\gamma>0$ and a polynomial-time algorithm $A$ that finds the planted clique $C$ from $G\sim\PC(n,n^{1/2-\alpha})$ with probability $1-\exp(-n^\gamma)$.
+  > 3. There exist constants $\alpha,\gamma>0$ and a polynomial-time algorithm $A$ that finds the planted clique $C$ from $G\sim\PC(n,n^{1/2-\alpha})$ with success probability $1/n^\gamma$.
   > 4. There exist a constant $\alpha>0$ and a polynomial-time algorithm $A$ that distinguishes $\PC(n,n^{1/2-\alpha})$ from $G(n,1/2)$ with advantage $1/3$.
   > 5. There exist constants $\alpha,\gamma>0$ and a polynomial-time algorithm $A$ that distinguishes $\PC(n,n^{1/2-\alpha})$ from $G(n,1/2)$ with advantage $1-\exp(-n^\gamma)$.
   > 6. There exist constants $\alpha,\gamma>0$ and a polynomial-time algorithm $A$ that distinguishes $\widetilde{\PC}(n,n^{1/2-\alpha})$ from $G(n,1/2)$ with advantage $k^{2+\gamma}/n$.
@@ -136,12 +137,14 @@ In view of this, the formal statement of "Planted Clique Conjecture" relies on
   {: .corollary-title}
   >**Corollary 3 (informal)**
   >
-  > If there is a polynomial-time algorithm that distinguishes $\widetilde{\PC}(n,k)$ and $G(n,1/2)$ with advantage $k^{2+\gamma}/n$ for some constant $\gamma>0$, then there is a polynomial-time algorithm that recovers the planted clique for a graph drawn from $\PC(n,n^{1/2-\alpha'})$ with advantage $1-\exp(-n^{\gamma'})$ for some constants $\alpha',\gamma'>0$.
+  > If there is a polynomial-time algorithm that distinguishes $\widetilde{\PC}(n,k)$ and $G(n,1/2)$ with advantage $k^{2+\gamma}/n$ for some constant $\gamma>0$, then there is a polynomial-time algorithm that finds the planted clique for a graph drawn from $\PC(n,n^{1/2-\alpha'})$ with advantage $1-\exp(-n^{\gamma'})$ for some constants $\alpha',\gamma'>0$.
 
   Indeed, by counting the number of edges, we can distinguish $\widetilde{\PC}(n,k)$ with $G(n,1/2)$ with advantage $\Omega(k^/n)$ (see, e.g., [Luca's blog](https://lucatrevisan.wordpress.com/2018/05/06/search-vs-decision-vs-certification-for-planted-problems/)).
   Therefore, Corollary 3 implies that assuming Planted Clique Conjecture, **the edge counting algorithm is almost optimal** for the decision version of Planted Clique Problem.
+  
+  Corollary 3 improves the search-to-decision reduction by Alon et al.[15]. Informally speaking, they showed how to reduce finding the planted clique in $\PC(n,k)$ to distinguishing $\PC(n,k)$ and $G(n,1/2)$ with advantage $1-o(n)$.
 
-  **Update News**: A very recent paper [15] further closed the gap between $k^{2+\gamma}/n$ and $k^2/n$. Actually, they showed that assuming Conjecture 1, a low-degree algorithm achieves an optimal advantage for the decision version of Planted Clique Problem.
+  **Later work**: A very recent paper [16] further closed the gap between $k^{2+\gamma}/n$ and $k^2/n$ using a more sophisticated analysis. Actually, they showed that assuming Conjecture 1, a low-degree algorithm achieves an optimal advantage for the decision version of Planted Clique Problem.
 
 ## Techniques
 
@@ -150,7 +153,7 @@ These reductions are aimed to boost the advantage or success probability of an a
 
 ### Embedding Reduction
 
-This reduction is introduced in our previous work [16].
+This reduction is introduced in our previous work [17].
 The idea is to randomly embed the planted clique $C$ into a larger Erdős--Rényi graph $G(N,1/2)$.
 
 {: align="center"}
@@ -160,30 +163,122 @@ The idea is to randomly embed the planted clique $C$ into a larger Erdős--Rény
 Note that the distribution of the resulting graph is identical to $\PC(N,k)$.
 If we set $N = n^{1+o(1)}$ and $k = n^{1/2-\alpha}$, then the size of the planted clique $C$ is $k = n^{1/2-\alpha} = N^{1/2-\alpha-o(1)}$.
 
-Our strategy is simple:
-1. Let $A$ be an algorithm that finds the planted clique with success probability $\gamma$. Let $G\sim\PC(n,k)$ be the input.
-2. Obtain $G'$ by the embedding reduction above.
-3. If $A(G')$ outputs a $k$-clique $C'$, then, we can recover the original clique and output it.
-4. Repeat 2-3 for $\poly(n)$ times.
+Let $\calO$ be an algorithm that finds the planted clique in $G(N,k)$ with small success probability.
+Consider the following oracle algorithm $A^{\calO}$:
 
-This gives us a polynomial-time algorithm that recovers the planted clique with very high success probability.
+{: .corollary-title}
+> **Algorithm $A_{\mathrm{emd}}^{\calO}(G,N)$.**
+>
+> Let $G\sim\PC(n,k)$ be the input and $N$ is a parameter.
+> 1. Obtain $G'$ by the embedding reduction above.
+> 2. If $\calO(G')$ is a $k$-clique $C'$, then, we can find the original clique and output it.
+> 3. Repeat 1-2 for $\poly(n)$ times. If we cannot find a $k$-clique, then output "failure".
+
+Using this, we can boost the success probability of $\calO$ as follows:
+
+{: .theorem-title}
+> **Theorem 4 (Theorem 6.8 in the full version)**
+>
+> Suppose that $\calO$ finds the planted clique in $G(N,k)$ with success probability $\varepsilon$ and let $\delta>0$ be any parameter.
+> If $N$ satisfies $N\ge n\cdot \log(1/\varepsilon)/\delta^2$, then the oracle algorithm $A^{\calO}_{\mathrm{emb}}(G,N)$ finds the planted clique in $G(n,k)$ with success probability $1-\delta$.
+
+If we set $\varepsilon = 1/\poly(n)$ and $\delta=1/3$, we can say that the oracle algorithm $A^{\calO}_{\mathrm{emb}}(G,N)$ finds the planted clique in $G(n,k)$ with success probability $2/3$
+given an oracle $\calO$ that finds the planted clique in $G(N,k)$ with success probability $1/\poly(n)$.
+This implies Item 3 $\Rightarrow$ Item 1 in Theorem 2.
+
+A similar boosting result also holds for the decision version, where we boost the advantage by taking the majority of the answers.
+
+
+{: .corollary-title}
+> **Algorithm $D_{\mathrm{emd}}^{\calO}(G,N)$.**
+>
+> Let $G$ be the input $n$-vertex vector and $N$ is a parameter.
+> 1. Obtain $G'$ by the embedding reduction above.
+> 2. Let $b\leftarrow \calO(G')$.
+> 3. Repeat 1-2 for $\poly(n)$ times and output the majority of the answers $b$.
+
+{: .theorem-title}
+> **Theorem 5 (Theorem 6.9 in the full version)**
+>
+> Suppose that $\calO$ distinguishes $\PC(N,k)$ and $G(N,k)$ with advantage $\varepsilon$ and let $\delta>0$ be any parameter.
+> If $N$ satisfies $N\ge n\cdot \log(1/\varepsilon)/(\delta^2\varepsilon^2)$, then the oracle algorithm $A^{\calO}_{\mathrm{emb}}(G,N)$ finds the planted clique in $G(n,k)$ with success probability $1-\delta$.
+
+Unfortunately, we cannot set $\varepsilon=1/\poly(n)$ here (for example, if we set $\varepsilon=1/n$, then we would have $N=n^3$, which is too big).
 
 ### Shrinking Reduction
 
-This reduction is the new reduction introduced in this paper.
-The reduction itself is very simple: Given an $M$-vertex graph drawn from $\PC(M,k)$, choose $m$ distinct vertices randomly and take the subgraph induced by these vertices.
+The main drawback of the embedding reduction is that we cannot set $\delta$ to be small.
+This is because the size of the large graph is $N\ge 1/\delta^2$.
+In order to deal with small $\delta$, we shall use a different reduction called **shrinking reduction**.
+
+The reduction is very simple: Given an $M$-vertex graph, choose $m<M$ distinct vertices randomly and take the subgraph induced by these vertices.
 
 {: align="center"}
   ![Shrinking Reduction]({{site.baseurl}}/docs/images/shrinking.png)
 {: width=70%}
 
-Let $S\subseteq[M]$ be set of the chosen $m$ vertices in this reduction and $C\subseteq[M]$
-Then, the resulting graph has clique of size $\abs{S\cap C}$.
-The distribution of $\abs{S\cap C}$ is identical to the hypergeometric distribution with mean $\frac{m}{M}k$.
-Actually, this distribution is statistically close to the binomial distribution $\mathrm{Bin}(m,k/M)$.
-That is, the resulting graph has a clique of size (statistically close to) $\mathrm{Bin}(m,k/M)$, meaning that the graph is close to $\widetilde{\PC}(n,k)$.
+Let $G$ be the original graph and $G'$ be the resulting graph.
+If $G$ is drawn from $G(M,1/2)$, then the distribution of $G'$ is $G(m,1/2)$.
 
-If $k=M^{1/2-\alpha}$ and $m=M^{1-o(1)}$, then the expected size of the clique is $\frac{m}{M}k=M^{1/2-\alpha-o(1)}=m^{1/2-\alpha-o(1)}$.
+On the other hand, if $G$ is drawn from $\PC(M,k)$ with planted clique $C\subseteq[M]$, then the distribution of $G'$ is $\PC(m,k')$, where $k'$ is the number of vertices in the planted clique included in the vertices of $G'$. More precisely, let $S\subseteq[M]$ be set of the chosen $m$ vertices in this reduction and $C\subseteq[M]$ be the planted clique. Then, the resulting graph has clique of size $k'=\abs{S\cap C}$.
+Note that $k'$ is a random variable.
+The distribution of $k'$ is identical to the hypergeometric distribution with mean $\frac{m}{M}k$.
+Actually, this distribution is statistically close to the binomial distribution $\mathrm{Bin}(m,k/M)$.
+Conditioned on $k'$ the distribution of $G'$ is precisely $\PC(m,k')$.
+Therefore, the resulting graph has a clique of size (statistically close to) $\mathrm{Bin}(m,k/M)$, meaning that the graph is statistically close to $\widetilde{\PC}(n,k)$.
+
+Likewise as the embedding reduction, we can boost the success probability or advantage of an algorithm using this reduction.
+In the following, we focus on the decision version.
+
+{: .corollary-title}
+> **Algorithm $D_{\mathrm{shr}}^{\calO}(G,m)$.**
+>
+> Let $G$ be the graph over $M$ vertices and $m$ is a parameter.
+> 1. Choose $m$ vertices uniformly at random from $G$ and let $G'$ be the subgraph induced by $m$.
+> 2. Output $\pi(G')$, where $\pi\colon[m]\to[m]$ is a random permutation.
+> 3. Let $b\leftarrow\calO(G')$.
+> 4. Repeat 1-3 for $\poly(m)$ times and output the majority of the answers $b$.
+
+{: .theorem-title}
+> **Theorem 6 (Theorem 6.9 in the full version)**
+>
+> Let $\calO$ be an algorithm that distinguishes $\widetilde{\PC}(m,k')$ and $G(m,1/2)$ with advantage $\varepsilon$, where $k'=(m/M)\cdot k$.
+> For any $\delta>0$, let $m$ be a parameter such that $m\le M\cdot \varepsilon / \sqrt{\log(1/\delta)}$.
+> Then, the algorithm $A^{\calO}_{\mathrm{shr}}(G,m)$ distinguishes $\PC(M,k)$ and $G(M,1/2)$ with advantage $1-\delta$.
+
+The key point is that the parameter $m$ depends logarithmically on $1/\delta$, which enables us to set $\delta = \exp(-M^{o(1)})$.
+On the other hand, $m$ depends polynomially on $1/\varepsilon$. So we need $\varepsilon = M^{-o(1)}$.
+Fortunately, we can deal with this case thanks to the embedding reduction!
+
+Although $\PC(n,k)$ and $\widetilde{\PC}(n,k)$ are very similar, we are not aware of any computational equivalence between them.
+But we can prove reduce search problem over $\widetilde{\PC}(m,1.1k)$ to the search problem over $\PC(m,k)$ with a cost of success probability.
+
+{: .lemma-title}
+> **Lemma 7 (Modification of Lemma 5.7 in the full version)**
+>
+> Let $k=\omega(\log m)$. If there is a polynomial-time algorithm that finds the planted clique in $\PC(m,k)$ with success probability $1-\delta$, then there is a polynomial-time algorithm that finds the planted clique in $\widetilde{\PC}(m,1.1k)$ with success probability $1-m\delta-m^{-\omega(1)}$.
+
+**Proof sketch.** Let $\calO$ be the algorithm that finds the planted clique in $\PC(m,k)$ with success probability $1-\delta$.
+Let $G\sim\widetilde{\PC}(m,1.1k)$ be the input.
+Since the distribution of the planted clique size is $\mathrm{Bin}(m,1.1k/m)$, the Hoeffding bound implies that the clique size is at least $k$ with probability $1-m^{-\omega(1)}$.
+
+The idea of the reduction is simple: Let $v_1,\dots,v_m$ be the vertices of $G$. For each $i\in[m]$, let $G_i$ be the graph obtained by resampling edges touching $\{v_1,\dots,v_i\}$.
+Run the oracle $\calO$ on each $G_i$.
+If the oracle finds a $k$-clique in $G_i$, then it is a subclique of the planted clique $C$ in $G$ (with high probability).
+So we can recover the whole clique in $G$.
+
+{: align="center"}
+  ![Resampling]({{site.baseurl}}/docs/images/resample.png)
+{: width=70%}
+
+In $G_i$, the size of the planted clique is $k - \abs{\qty{v_1,\dots,v_i}\cap C}$. Therefore, the clique size decreases by at most 1 for each $i$.
+For some $j$, the marginal distribution of $G_{j}$ is $\PC(m,k)$ and the algorithm $\calO$ finds the planted clique in $G_{j}$ with success probability $1-\delta$.
+By the union bound over $i$, the total success probability is at least $1-m\delta$.
+$\square$
+
+Unfortunately, we are not aware of how to prove a analogous lemma for the decision version.
+
+
 
 ## References
 
@@ -201,5 +296,6 @@ If $k=M^{1/2-\alpha}$ and $m=M^{1-o(1)}$, then the expected size of the clique i
 12. Damiano Abram, Amos Beimel, Yuval Ishai, Eyal Kushilevitz, and Varun Narayanan. 2023. Cryptography from Planted Graphs: Security with Logarithmic-Size Messages. *In Proceedings of Theory of Cryptography (TCC)*, [doi:10.1007/978-3-031-48615-9_11](https://link.springer.com/chapter/10.1007/978-3-031-48615-9_11).
 13. Benny Applebaum, Boaz Barak, and Avi Wigderson. 2010. Public-Key Cryptography from Different Assumptions. *In Proceedings of Symposium on Theory of Computing*. [doi:10.1145/1806689.1806715](https://dl.acm.org/doi/10.1145/1806689.1806715).
 14. Shuichi Hirahara and Nobutaka Shimizu. 2024. Planted Clique Conjectures Are Equivalent. *In Proceedings of Symposium on Theory of Computing (STOC)*. [doi:10.1145/3618260.3649751](https://dl.acm.org/doi/10.1145/3632754.3632950).
-15. Ansh Nagda and Prasad Raghavendra. 2025. On optimal distinguishers for Planted Clique. [arXiv:2505.01990](https://arxiv.org/abs/2505.01990).
-16. Shuichi Hirahara and Nobutaka Shimizu. 2023. Hardness Self-Amplification: Simplified, Optimized, and Unified. *In Proceedings of Symposium on Theory of Computing (STOC)*. [doi:10.1145/3564246.3585189](https://dl.acm.org/doi/10.1145/3564246.3585189).
+15. Noga Alon, Alexandr Andoni, Tali Kaufman, Kevin Matulef, Ronitt Rubinfeld, and Ning Xie. 2007. Testing k-wise and almost k-wise independence, *In Proceedings of Symposium on Theory of Computing (STOC)*, [doi: 10.1145/1250790.1250863](https://dl.acm.org/doi/10.1145/1250790.1250863).
+16. Ansh Nagda and Prasad Raghavendra. 2025. On optimal distinguishers for Planted Clique. [arXiv:2505.01990](https://arxiv.org/abs/2505.01990).
+17. Shuichi Hirahara and Nobutaka Shimizu. 2023. Hardness Self-Amplification: Simplified, Optimized, and Unified. *In Proceedings of Symposium on Theory of Computing (STOC)*. [doi:10.1145/3564246.3585189](https://dl.acm.org/doi/10.1145/3564246.3585189).
