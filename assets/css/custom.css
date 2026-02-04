@@ -54,4 +54,124 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
 .paper-tag.consensus {
   background-color: #e0f2f1;
   color: #00695c;
-} 
+}
+
+/* Papers list: container for publication items */
+.papers-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* Paper: each publication as a box */
+.papers-list .paper {
+  display: block;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.papers-list .paper:hover {
+  background-color: #e8eef4;
+  border-color: #7cb3d4;
+}
+
+/* Single continuous blue block for abstract body (paragraphs + list) */
+.paper-abstract-body {
+  margin: 0.15em 0 0;
+  padding: 0.75em;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border-left: 3px solid #1565c0;
+}
+
+.paper-abstract-body p,
+.paper-abstract-body ul {
+  margin: 0.5em 0 0;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.paper-abstract-body p:first-child,
+.paper-abstract-body ul:first-child {
+  margin-top: 0;
+}
+
+/* Abstract ul: no bullets, not paper boxes */
+.paper-abstract ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.paper-abstract ul li {
+  border: none;
+  border-radius: 0;
+  padding: 0.2em 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  margin-left: 0;
+  list-style: none;
+}
+
+.paper-abstract ul li:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* Abstract toggle: blue with triangle */
+.paper-abstract summary {
+  display: list-item;
+  list-style-type: disclosure-closed;
+  list-style-position: inside;
+  margin-top: 0.5em;
+  padding: 0.35em 0.75em 0.35em 0.5em;
+  background-color: #1565c0;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Triangle visible in WebKit/Blink */
+.paper-abstract summary::-webkit-details-marker {
+  display: inline-block;
+  color: #fff;
+}
+
+details[open].paper-abstract summary {
+  list-style-type: disclosure-open;
+  margin-bottom: 0;
+}
+
+.paper-abstract summary:hover {
+  background-color: #1976d2;
+}
+
+.paper-abstract .paper-abstract-content,
+.paper-abstract > p {
+  margin: 0.15em 0 0;
+  padding: 0.75em;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border-left: 3px solid #1565c0;
+}
+
+/* Inside .paper-abstract-body: no extra border, body wrapper has the single blue line */
+.paper-abstract .paper-abstract-body p,
+.paper-abstract .paper-abstract-body ul {
+  border: none;
+  background: none;
+  border-radius: 0;
+}
+
+.paper-abstract .paper-abstract-body p {
+  padding: 0;
+}
+
+.paper-abstract .paper-abstract-body ul {
+  padding: 0 0 0 1.5em;
+}
