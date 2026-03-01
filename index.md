@@ -12,3 +12,5 @@ This publication list includes peer-reviewed journal articles, conference procee
 - [**Journal Articles (Peer-Reviewed)**]({{ site.baseurl }}/docs/journal)
 - [**Conference Proceedings (Peer-Reviewed)**]({{ site.baseurl }}/docs/conference)
 - [**Other Publications**]({{ site.baseurl }}/docs/other)
+
+See [google scholar](https://scholar.google.com/citations?user=FB2nx_oAAAAJ) for the latest information.
