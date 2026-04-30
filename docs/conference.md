@@ -6,6 +6,23 @@ nav_order: 3
 # Conference Proceedings (Peer-Reviewed)
 
 <div class="papers-list">
+<div class="paper" markdown="1">**Undecided State Dynamics with Many Opinions**<br>
+  Colin Cooper, Frederik Mallmann-Trenn, Tomasz Radzik, Nobutaka Shimizu, Takeharu Shiraga<br>
+  *Symposium on Principles of Distributed Computing (**PODC 2026**)*<br>
+  [arXiv:2603.02636](https://arxiv.org/abs/2603.02636) <br>
+  <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
+  <details class="paper-abstract"><summary>Abstract</summary>
+  <div class="paper-abstract-body">
+    <p>
+    This paper presents the first nearly-linear consensus time of the Undecided-State Dynamics (USD) for <b>arbitrary</b> number of opinions $k$ and <b>arbitrary</b> initial configuration in both the gossip model and the population protocol model, which were long-standing open question in a line of works.
+    </p>
+    <p>
+    In the gossip model, USD reaches consensus within $\widetilde O(\min\{k,\sqrt n\})$ synchronous rounds with probability $1-p_{\bot}-n^{-c}$, where $p_{\bot}$ denotes the probability that USD reaches the all-$\bot$ configuration in the first round.
+    In the population protocol model, USD reaches consensus within $\widetilde O(\min\{kn,n^{3/2}\})$ asynchronous interactions with high probability.
+    </p>
+  </div>
+  </details></div>
+
 <div class="paper" markdown="1">**Optimal Random Self-Reductions for All Linear Problems**<br>
   Shuichi Hirahara, Nobutaka Shimizu<br>
   *Symposium on Theory of Computing (**STOC 2026**)*<br>
