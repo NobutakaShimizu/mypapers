@@ -7,6 +7,12 @@ nav_order: 2
 
 <div class="papers-list">
 
+<div class="paper" markdown="1">**AN EFFICIENT ALGORITHM FOR COMPUTING AVERAGE NETWORK FLOW**<br>
+  Yutaro Fuse, Tomomi Matsui, Nobutaka Shimizu, and Akiyoshi Shioura<br>
+  *Journal of the Operations Research Society of Japan*, 69(2), pp.39-46, 2026 <br>
+  [J-STAGE](https://www.jstage.jst.go.jp/article/jorsj/69/2/69_39/_article/-char/ja/) | [DOI: 10.15807/jorsj.69.39](https://doi.org/10.15807/jorsj.69.39) <br>
+</div>
+
 <div class="paper" markdown="1">**How Many Vertices Does a Random Walk Miss in a Network with a Moderately Increasing Number of Vertices?**<br>
   Shuji Kijima, Nobutaka Shimizu, and Takeharu Shiraga<br>
   *MATHEMATICS OF OPERATIONS RESEARCH*, 2025 <br>
