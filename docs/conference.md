@@ -26,7 +26,7 @@ nav_order: 3
 <div class="paper" markdown="1">**Optimal Random Self-Reductions for All Linear Problems**<br>
   Shuichi Hirahara, Nobutaka Shimizu<br>
   *Symposium on Theory of Computing (**STOC 2026**)*<br>
-  [ECCC](https://eccc.weizmann.ac.il/report/2026/048/) <br>
+  [ECCC](https://eccc.weizmann.ac.il/report/2026/048/) | [Slide](https://nobutakashimizu.github.io/STOC26_linear/1) <br>
   <span class="paper-tag complexity">Average-Case Complexity</span>
   <details class="paper-abstract"><summary>Abstract</summary>
   <div class="paper-abstract-body">
