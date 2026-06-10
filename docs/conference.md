@@ -26,6 +26,7 @@ nav_order: 3
 <div class="paper" markdown="1">**Optimal Random Self-Reductions for All Linear Problems**<br>
   Shuichi Hirahara, Nobutaka Shimizu<br>
   *Symposium on Theory of Computing (**STOC 2026**)*<br>
+  [DOI: 10.1145/3798129.3800773](https://dl.acm.org/doi/10.1145/3798129.3800773) |
   [ECCC](https://eccc.weizmann.ac.il/report/2026/048/) | [Slide](https://nobutakashimizu.github.io/STOC26_linear/1) <br>
   <span class="paper-tag complexity">Average-Case Complexity</span>
   <details class="paper-abstract"><summary>Abstract</summary>
@@ -61,6 +62,7 @@ nav_order: 3
 <div class="paper" markdown="1">**Hardness Amplification Beyond Boolean Functions**<br>
   Nobutaka Shimizu, Kenji Yasunaga<br>
   *Symposium on Theory of Computing (**STOC 2026**)*<br>
+  [DOI: 10.1145/3798129.3800838](https://dl.acm.org/doi/10.1145/3798129.3800838) | 
   [ECCC](https://eccc.weizmann.ac.il/report/2026/038/) <br>
   <span class="paper-tag complexity">Average-Case Complexity</span>
   <details class="paper-abstract"><summary>Abstract</summary>
