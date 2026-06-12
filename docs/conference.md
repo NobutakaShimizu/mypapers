@@ -63,7 +63,7 @@ nav_order: 3
   Nobutaka Shimizu, Kenji Yasunaga<br>
   *Symposium on Theory of Computing (**STOC 2026**)*<br>
   [DOI: 10.1145/3798129.3800838](https://dl.acm.org/doi/10.1145/3798129.3800838) | 
-  [ECCC](https://eccc.weizmann.ac.il/report/2026/038/) <br>
+  [ECCC](https://eccc.weizmann.ac.il/report/2026/038/) | [Slide](https://nobutakashimizu.github.io/STOC26_Fp/1) <br>
   <span class="paper-tag complexity">Average-Case Complexity</span>
   <details class="paper-abstract"><summary>Abstract</summary>
   <div class="paper-abstract-body">
