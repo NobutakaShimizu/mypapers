@@ -6,6 +6,24 @@ nav_order: 3
 # Conference Proceedings (Peer-Reviewed)
 
 <div class="papers-list">
+
+<div class="paper" markdown="1">**Error-Correction of Matrix Multiplication Algorithms over Integers**<br>
+  Shuichi Hirahara, Nobutaka Shimizu<br>
+  *Symposium on Foundations of Computer Science (**FOCS 2026**)*<br>
+  <span class="paper-tag complexity">Average-Case Complexity</span> <span class="paper-tag code">Error-Correcting Code</span>
+  <details class="paper-abstract"><summary>Abstract</summary>
+  <div class="paper-abstract-body">
+    <p>
+    This paper studies error-correction of matrix multiplication algorithms over integers. My prior work with Shuichi (STOC25 and ICALP25) investigated the same problem, where the matrices are over <b>finite fields</b>. Prior worst-case-exact-to-average-case-approximate reduction crucially relies on error-correcting codes, which works over finite field of constant size. Another work by Vaikuntanathan and Zamir (SODA26) who presented a more efficient reduction under the hardness conjecture of LWE, also crucially relies on the point that the matrices are over finite field.
+
+    This paper present such error-correcting reduction that, given an average-case solver that computes only $\varepsilon$-fraction of entries of $AB$ for random binary matrices $A,B\sim\{0,1\}^{n\times n}$ (the multiplication is over integer), construct a worst-case solver thath computes the whole entries of $AB$.
+    </p>
+    <p>
+    The key technical core of this reduction is to introduce <b>signed sum encoding</b> over expander walks and apply the nearly-linear time list decoder by Jeronimo (RANDOM23).
+    </p>
+  </div>
+  </details></div>
+
 <div class="paper" markdown="1">**Undecided State Dynamics with Many Opinions**<br>
   Colin Cooper, Frederik Mallmann-Trenn, Tomasz Radzik, Nobutaka Shimizu, Takeharu Shiraga<br>
   *Symposium on Principles of Distributed Computing (**PODC 2026**)*<br>
