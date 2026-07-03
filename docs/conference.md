@@ -9,7 +9,7 @@ nav_order: 3
 <div class="paper" markdown="1">**Undecided State Dynamics with Many Opinions**<br>
   Colin Cooper, Frederik Mallmann-Trenn, Tomasz Radzik, Nobutaka Shimizu, Takeharu Shiraga<br>
   *Symposium on Principles of Distributed Computing (**PODC 2026**)*<br>
-  [arXiv:2603.02636](https://arxiv.org/abs/2603.02636) <br>
+  [DOI: 3796701.3815920](https://dl.acm.org/doi/10.1145/3796701.3815920) | [arXiv:2603.02636](https://arxiv.org/abs/2603.02636) | [Slide](https://nobutakashimizu.github.io/PODC26_USD/1) <br>
   <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
   <details class="paper-abstract"><summary>Abstract</summary>
   <div class="paper-abstract-body">
