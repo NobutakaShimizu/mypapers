@@ -7,6 +7,24 @@ nav_order: 3
 
 <div class="papers-list">
 
+<div class="paper" markdown="1">**Improved Quantum Random Self-Reduction for Linear Problems**<br>
+  Vahid R. Asadi, Shuichi Hirahara, Nobutaka Shimizu<br>
+  *Symposium on Discrete Algorithms (**SODA 2027**)*<br>
+  <span class="paper-tag complexity">Average-Case Complexity</span> <span class="paper-tag code">Quantum Complexity</span>
+  <details class="paper-abstract"><summary>Abstract</summary>
+  <div class="paper-abstract-body">
+    In a linear problem $\mathcal{L}_M$ for a fixed matrix $M\in\mathbb{F}^{n\times n}$, we are given a vector $x\in\mathbb{F}^n$ as input and are asked to compute $Mx$, where $\mathbb{F}$ is a finite field.
+
+    This paper presents a worst-case-to-average-case reduction for $\mathcal{L}_M$ for every $M$ that runs in time $\widetilde{O}(nT^{1/3})$, for $n\le T\le n^{3/2}$ is the running time of one coherent query to an average-case solver $\mathcal{O}$. Here, we assume that $\Pr_x[\mathcal{O}(x)=Mx]\ge \varepsilon$ for some constant $\varepsilon>0$ and $|\mathbb{F}|=O(1)$.
+    For example, if $T=\widetilde{O}(n)$, then our running time becomes $\widetilde{O}(n^{4/3})$, which improves the prior time of $\widetilde{O}(n^{3/2})$ by Asadi, Golovnev, Gur, Shinkar, and Subramanian (SODA 2024).
+    In classical setting, we cannot obtain $O(n^{2-\varepsilon})$ for any constant $\varepsilon>0$ without any nonuniform advice as shown by my STOC26 paper.
+
+    <p>
+    Our reduction utilizes the tournament verification idea by my STOC26 paper and uses Grover search. In particular, this avoids the heavy task of learning Bogolyubov--Ruzsa subspace of Asadi, Golovnev, Gur, Shinkar, and Subramanian (SODA 2024).
+    </p>
+  </div>
+  </details></div>
+
 <div class="paper" markdown="1">**Error-Correction of Matrix Multiplication Algorithms over Integers**<br>
   Shuichi Hirahara, Nobutaka Shimizu<br>
   *Symposium on Foundations of Computer Science (**FOCS 2026**)*<br>
