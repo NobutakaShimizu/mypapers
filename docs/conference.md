@@ -180,7 +180,7 @@ nav_order: 3
   Shuichi Hirahara, Nobutaka Shimizu<br>
   *Symposium on Theory of Computing (**STOC 2025**)*<br>
   [DOI: 10.1145/3717823.3718244](https://dl.acm.org/doi/10.1145/3717823.3718244) |
-  [ECCC](https://eccc.weizmann.ac.il/report/2024/026/) | [Slide](https://nobutakashimizu.github.io/stoc25_slide)  <br>
+  [ECCC](https://eccc.weizmann.ac.il/report/2025/031/) | [Slide](https://nobutakashimizu.github.io/stoc25_slide)  <br>
   <span class="paper-tag complexity">Average-Case Complexity</span> <span class="paper-tag code">Error-Correcting Code</span>
   <details class="paper-abstract"><summary>Abstract</summary>
   <div class="paper-abstract-body">
