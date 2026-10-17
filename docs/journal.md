@@ -32,7 +32,7 @@ nav_order: 2
 <div class="paper" markdown="1">**Reversible Random Walks on Dynamic Graphs**<br>
   Nobutaka Shimizu and Takeharu Shiraga<br>
   *Random Structures & Algorithms*, 63(4), pp.1100-1136, 2023<br>
-  [DOI: 10.1002/rsa.21164](https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.21164) | [arXiv (2022)](https://arxiv.org/abs/2002.07411)  
+  [DOI: 10.1002/rsa.21164](https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.21164) | [arXiv (2022)](https://arxiv.org/abs/2102.08002)  
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Walks</span>
 </div>
 

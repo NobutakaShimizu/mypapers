@@ -228,7 +228,7 @@ nav_order: 3
 <div class="paper" markdown="1">**Asynchronous 3-Majority Dynamics with Many Opinions**<br>
   Colin Cooper, Frederik Mallmann-Trenn, Tomasz Radzik, Nobutaka Shimizu, Takeharu Shiraga<br>
   *Symposium on Discrete Algorithms (**SODA 2025**)*<br>
-  [DOI: 10.1137/1.9781611978322.140](https://epubs.siam.org/doi/10.1137/1.9781611978322.140) | [arXiv:2503.02426](https://arxiv.org/abs/2503.02426) | [Slide](https://nobutakashimizu.github.io/SODA25_slide/)  <br>
+  [DOI: 10.1137/1.9781611978322.140](https://epubs.siam.org/doi/10.1137/1.9781611978322.140) | [arXiv:2410.11172](https://arxiv.org/abs/2410.11172) | [Slide](https://nobutakashimizu.github.io/SODA25_slide/)  <br>
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag consensus">Consensus Dynamics</span> <span class="paper-tag randomized">Stochastic Processes</span>
   <details class="paper-abstract"><summary>Abstract</summary>
   <div class="paper-abstract-body">
