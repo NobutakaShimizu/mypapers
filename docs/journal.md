@@ -15,7 +15,7 @@ nav_order: 2
 
 <div class="paper" markdown="1">**How Many Vertices Does a Random Walk Miss in a Network with a Moderately Increasing Number of Vertices?**<br>
   Shuji Kijima, Nobutaka Shimizu, and Takeharu Shiraga<br>
-  *MATHEMATICS OF OPERATIONS RESEARCH*, 2025 <br>
+  *MATHEMATICS OF OPERATIONS RESEARCH*, 51(1), pp.783-805, 2026 (published online April 4, 2025) <br>
   [DOI: 10.1287/moor.2023.0060](https://pubsonline.informs.org/doi/full/10.1287/moor.2023.0060) | [arXiv (2021)](https://arxiv.org/abs/2008.10837) | [Slide](https://speakerdeck.com/nobushimi/how-many-vertices-does-a-random-walk-miss-in-a-network-with-moderately-increasing-the-number-of-vertices) <br>
   Preliminary version appeared in [SODA2021](https://epubs.siam.org/doi/abs/10.1137/1.9781611976465.8?mobileUi=0)  <br>
   <span class="paper-tag randomized">Random Walks</span>

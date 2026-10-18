@@ -10,6 +10,7 @@ nav_order: 3
 <div class="paper" markdown="1">**Improved Quantum Random Self-Reduction for Linear Problems**<br>
   Vahid R. Asadi, Shuichi Hirahara, Nobutaka Shimizu<br>
   *Symposium on Discrete Algorithms (**SODA 2027**)*<br>
+  [arXiv:2609.39823](https://arxiv.org/abs/2609.39823) <br>
   <span class="paper-tag complexity">Average-Case Complexity</span> <span class="paper-tag code">Quantum Complexity</span>
   <details class="paper-abstract"><summary>Abstract</summary>
   <div class="paper-abstract-body">
