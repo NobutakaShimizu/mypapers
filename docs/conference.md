@@ -243,7 +243,7 @@ nav_order: 3
 <div class="paper" markdown="1">**Planted Clique Conjectures Are Equivalent**<br>
   Shuichi Hirahara, Nobutaka Shimizu<br>
   *Symposium on Theory of Computing (**STOC 2024**)*<br>
-  [DOI: 10.1145/3618260.3649751](https://dl.acm.org/doi/abs/10.1145/3618260.3649751) | [ECCC](https://eccc.weizmann.ac.il/report/2024/058/) | [Slide](https://speakerdeck.com/nobushimi/planted-clique-conjectures-are-equivalent)  
+  [DOI: 10.1145/3618260.3649751](https://dl.acm.org/doi/abs/10.1145/3618260.3649751) | [ECCC](https://eccc.weizmann.ac.il/report/2024/058/) | [Slide](https://speakerdeck.com/nobushimi/planted-clique-conjectures-are-equivalent) | [Slide (ISPC 2026) (in Japanese)](https://nobutakashimizu.github.io/ISPC26/)  
   <span class="paper-tag complexity">Average-Case Complexity</span> <span class="paper-tag graphs">Graph Theory</span>
   <details class="paper-abstract"><summary>Abstract</summary>
   <div class="paper-abstract-body">
