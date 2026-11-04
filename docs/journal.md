@@ -47,7 +47,7 @@ nav_order: 2
 <div class="paper" markdown="1">**The average distance and the diameter of dense random regular graphs**<br>
   Nobutaka Shimizu<br>
   *The Electronic Journal of Combinatorics*, 27(3), 2020<br>
-  [DOI: 10.37236/9809](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v27i3p62) <br>
+  [DOI: 10.37236/8705](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v27i3p62) <br>
   Preliminary version appeared in [SODA2018](https://epubs.siam.org/doi/abs/10.1137/1.9781611975031.126)   <br>
   <span class="paper-tag graphs">Graph Theory</span> <span class="paper-tag randomized">Random Graphs</span>
 </div>
